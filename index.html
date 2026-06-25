@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="ja"><head><style id="qw-theme">:root {
+  --color-bg: #f2f1f4;
+  --color-text: #352f3d;
+  --color-navbar-bg: #eae8ed;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #eae8ed;
+  --color-bg-hover: #dcdadf;
+  --color-surface: #eae8ed;
+  --color-surface-hover: #dcdadf;
+  --color-surface-active: #c1bec6;
+  --color-border: #c1bec6;
+  --color-border-light: #dcdadf;
+  --color-border-strong: #c1bec6;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 18%, transparent);
+  --color-primary-border: #8575ff;
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #ffffff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #eae8ed;
+  --color-user-bubble: #F3F3F7;
+  --color-user-bubble-text: #352f3d;
+  --color-text-secondary: #5e5966;
+  --color-text-tertiary: #7a7582;
+  --color-text-muted: #938f9b;
+  --color-text-on-primary: #f2f1f4;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f4eb;
+  --color-success-border: #c4dccb;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fbe9ea;
+  --color-error-border: #eecbcd;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #ffffff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fdf6e4;
+  --color-warning-border: #f5dda6;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #e6f0fb;
+  --color-info-border: #c0d5ec;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #ffffff;
+  --color-overlay: #dcdadf80;
+  --color-shadow: #352f3d40;
+  --color-hover: #352f3d0d;
+  --color-tooltip-bg: #eae8ed;
+  --color-tooltip-text: #352f3d;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: rgba(66, 0, 219, .4);
+  --color-voice-red-glow: rgba(219, 0, 0, .4);
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px rgba(53, 47, 61, .06);
+  --shadow-md: 0 4px 12px rgba(53, 47, 61, .1);
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #367c53;
+  --color-teal: #0c9aa7;
+  --color-code-bg: #eae8ed;
+  --color-code-header-bg: #dcdadf;
+  --color-code-text: #352f3d;
+  --color-code-border: #c1bec6;
+  --color-code-muted: #5e5966;
+  --color-inline-code-bg: #eae8ed;
+  --color-inline-code-text: #352f3d;
+  --color-inline-code-border: #c1bec6;
+  --color-scrollbar-thumb: #c1bec6;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #352f3d;
+  --color-graph-node-text-dim: #938f9b;
+  --color-graph-edge-default: #938f9b;
+  --color-graph-edge-cross: #d08025;
+  --color-graph-edge-text: #5e5966;
+  --color-graph-edge-stroke: #f2f1f4;
+  --color-graph-highlight-bg: #FF6B6B;
+  --color-graph-highlight-border: #E74C3C;
+  --color-graph-search-bg: #FFD700;
+  --color-graph-search-border: #FFA500;
+  --color-graph-focus-border: #C0392B;
+  --color-graph-external-border: #938f9b;
+  --color-graph-cat-file: #3878b0;
+  --color-graph-cat-folder: #5e5966;
+  --color-graph-cat-file-aggregate: #2d6a9f;
+  --color-graph-cat-class: #7138cc;
+  --color-graph-cat-function: #367c53;
+  --color-graph-cat-method: #0c9aa7;
+  --color-graph-cat-variable: #d08025;
+  --color-graph-cat-import: #b06a1a;
+  --color-graph-cat-module: #5e35a8;
+  --color-graph-cat-concept: #993333;
+  --color-graph-cat-person: #c44d4d;
+  --color-graph-cat-org: #0c9aa7;
+  --color-graph-cat-organization: #0c9aa7;
+  --color-graph-cat-product: #8e47ff;
+  --color-graph-cat-metric: #c44d78;
+  --color-graph-cat-location: #34495E;
+  --color-graph-cat-date: #b34d8a;
+  --color-graph-cat-code: #3878b0;
+  --color-graph-cat-doc: #5e5966;
+  --color-graph-cat-url: #367c53;
+  --color-graph-cat-email: #5e35a8;
+  --color-graph-cat-unknown: #938f9b;
+  --color-graph-rel-contains: #938f9b;
+  --color-graph-rel-extends: #7138cc;
+  --color-graph-rel-implements: #3878b0;
+  --color-graph-rel-imports: #d08025;
+  --color-graph-rel-uses: #367c53;
+  --color-graph-rel-calls: #367c53;
+  --color-graph-rel-references: #d08025;
+  --color-graph-rel-related-to: #938f9b;
+  --color-graph-rel-works-on: #993333;
+  --color-graph-rel-owns: #0c9aa7;
+  --color-graph-rel-depends-on: #b06a1a;
+  --color-graph-rel-parent-of: #938f9b;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #938f9b;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #eae8ed;
+  --qs-tertiary-background: #eae8ed;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: rgba(180, 0, 170, 1);
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1);
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EITS 割り勘マネージャー</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #0071e3;
+            --primary-hover: #0077ed;
+            --primary-light: rgba(0,113,227,0.08);
+            --bg: #f5f5f7;
+            --card: rgba(255,255,255,0.85);
+            --text: #1d1d1f;
+            --text-secondary: #86868b;
+            --text-muted: #aeaeb2;
+            --border: rgba(0,0,0,0.06);
+            --border-strong: #d2d2d7;
+            --success: #34c759;
+            --warning: #ff9500;
+            --danger: #ff3b30;
+            --glass-blur: saturate(180%) blur(20px);
+            --shadow: 0 4px 16px rgba(0,0,0,0.08);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.12);
+            --radius: 16px;
+            --radius-sm: 10px;
+        }
+        body {
+            font-family: 'Ember Modern Display', Meiryo, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 24px;
+            -webkit-font-smoothing: antialiased;
+        }
+        input, select, textarea, button {
+            font-family: 'Ember Modern Display', Meiryo, sans-serif;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding: 32px 24px;
+            background: var(--card);
+            backdrop-filter: var(--glass-blur);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+        .header p { color: var(--text-secondary); font-size: 0.95rem; }
+        .section {
+            background: var(--card);
+            backdrop-filter: var(--glass-blur);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            padding: 28px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s;
+        }
+        .section:hover { box-shadow: var(--shadow-hover); }
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title .icon { font-size: 1.4rem; }
+
+        /* Buttons */
+        .btn {
+            border: none;
+            border-radius: var(--radius-sm);
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn:hover { transform: translateY(-1px); }
+        .btn-primary { background: var(--primary); color: #fff; }
+        .btn-primary:hover { background: var(--primary-hover); box-shadow: 0 4px 12px rgba(0,113,227,0.3); }
+        .btn-success { background: var(--success); color: #fff; }
+        .btn-success:hover { box-shadow: 0 4px 12px rgba(52,199,89,0.3); }
+        .btn-warning { background: var(--warning); color: #fff; }
+        .btn-warning:hover { box-shadow: 0 4px 12px rgba(255,149,0,0.3); }
+        .btn-danger { background: var(--danger); color: #fff; }
+        .btn-danger:hover { box-shadow: 0 4px 12px rgba(255,59,48,0.3); }
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 1.5px solid rgba(0,113,227,0.3);
+        }
+        .btn-outline:hover { background: var(--primary-light); }
+        .btn-small { padding: 6px 12px; font-size: 0.78rem; border-radius: 8px; }
+        .btn-group { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        th {
+            text-align: left;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 8px 10px;
+            border-bottom: 1px solid var(--border-strong);
+        }
+        td { padding: 6px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+        tr:hover td { background: rgba(0,113,227,0.03); }
+
+        /* Inputs */
+        input[type="text"], input[type="number"], input[type="date"], select {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid var(--border-strong);
+            border-radius: 8px;
+            font-size: 0.82rem;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: rgba(255,255,255,0.6);
+        }
+        input:focus, select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0,113,227,0.12);
+        }
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-strong);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            outline: none;
+            resize: vertical;
+            min-height: 100px;
+            transition: border-color 0.2s;
+            background: rgba(255,255,255,0.6);
+        }
+        textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0,113,227,0.12);
+        }
+        input[type="checkbox"] {
+            width: 18px; height: 18px;
+            accent-color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* Grid helpers */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+        .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; }
+        @media (max-width: 600px) {
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            body { padding: 12px; }
+            .header { padding: 20px 16px; }
+            .header h1 { font-size: 1.5rem; }
+            .section { padding: 16px; }
+            .section-title { font-size: 1rem; }
+            .btn { padding: 8px 14px; font-size: 0.78rem; }
+            .btn-small { padding: 5px 10px; font-size: 0.72rem; }
+            .btn-group { gap: 6px; }
+            table { font-size: 0.78rem; }
+            th { font-size: 0.68rem; padding: 6px 4px; }
+            td { padding: 4px; }
+            th:nth-child(1) { min-width: 90px !important; }
+            th:nth-child(2) { width: 70px !important; }
+            th:nth-child(3), th:nth-child(4), th:nth-child(5) { width: 40px !important; }
+            th:nth-child(6) { width: 70px !important; }
+            th:nth-child(7) { width: 36px !important; }
+            input[type="text"], input[type="number"], select { padding: 6px 8px; font-size: 0.78rem; }
+            input[type="checkbox"] { width: 16px; height: 16px; }
+            .ratio-group input { width: 60px; }
+            .slack-output { font-size: 0.75rem; padding: 12px; }
+            .modal { padding: 20px; width: 95vw; }
+        }
+        @media (max-width: 400px) {
+            body { padding: 8px; }
+            .header h1 { font-size: 1.3rem; }
+            .section { padding: 12px; border-radius: 12px; }
+            th:nth-child(3), th:nth-child(4), th:nth-child(5) { width: 32px !important; font-size: 0.6rem; }
+            .btn-group { gap: 4px; }
+            .btn { padding: 6px 10px; font-size: 0.72rem; }
+            .grid-4 { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* Ratio inputs */
+        .ratio-group { display: flex; align-items: center; gap: 8px; }
+        .ratio-group label { font-size: 0.82rem; font-weight: 600; min-width: 30px; }
+        .ratio-group input { width: 80px; text-align: center; }
+
+        /* Diff display */
+        .diff-display {
+            text-align: center;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 16px;
+        }
+        .diff-zero { background: rgba(52,199,89,0.1); color: var(--success); }
+        .diff-positive { background: rgba(255,149,0,0.1); color: var(--warning); }
+        .diff-negative { background: rgba(255,59,48,0.1); color: var(--danger); }
+
+        /* Slack output */
+        .slack-output {
+            background: #1a1d21;
+            color: #d1d2d3;
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            font-family: 'Ember Modern Display', Meiryo, monospace;
+            font-size: 0.82rem;
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
+            line-height: 1.5;
+        }
+
+        /* Bulk paste modal */
+        .modal-overlay {
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(8px);
+            display: flex; align-items: center; justify-content: center;
+            z-index: 1000;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+        .modal {
+            background: var(--card);
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            width: 520px;
+            max-width: 90vw;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        .modal h3 { font-size: 1.1rem; margin-bottom: 8px; }
+        .modal p { font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 12px; }
+        .modal-btns { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+
+        /* Hidden row */
+        .hidden-row { display: none; }
+        .row-calculated { background: rgba(52,199,89,0.04); }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        .badge-blue { background: var(--primary-light); color: var(--primary); }
+        .badge-green { background: rgba(52,199,89,0.1); color: var(--success); }
+
+        /* Screenshot button */
+        .screenshot-section {
+            text-align: center;
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Parallax Header */
+
+        .header-blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:0.7;animation:headerBlob 6s ease-in-out infinite alternate;}
+        .header-blob-1{background:#4285F4;width:200px;height:200px;top:-40px;left:-20px;animation-delay:0s;}
+        .header-blob-2{background:#EA4335;width:180px;height:180px;top:-30px;right:10%;animation-delay:-1.5s;}
+        .header-blob-3{background:#FBBC05;width:160px;height:160px;bottom:-40px;left:30%;animation-delay:-3s;}
+        .header-blob-4{background:#34A853;width:170px;height:170px;bottom:-30px;right:20%;animation-delay:-4.5s;}
+        @keyframes headerBlob{0%{transform:translate(0,0) scale(1);}50%{transform:translate(10px,5px) scale(1.1);}100%{transform:translate(-5px,-5px) scale(0.95);}}
+
+        .parallax-header {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            margin-bottom: 32px;
+        }
+        .parallax-bg {
+            position: absolute;
+            inset: -30px;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 40%),
+                radial-gradient(circle at 60% 80%, rgba(0,0,0,0.1) 0%, transparent 40%);
+            transform: translateY(0);
+            transition: transform 0.1s ease-out;
+            pointer-events: none;
+        }
+        .parallax-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px 24px;
+            color: #fff;
+        }
+        .parallax-content h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .parallax-content p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+
+        /* Collapsible Member Section */
+        .collapse-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 4px 0;
+            user-select: none;
+        }
+        .collapse-header:hover { opacity: 0.8; }
+        .collapse-summary {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .collapse-arrow {
+            transition: transform 0.3s;
+            font-size: 0.9rem;
+        }
+        .collapse-arrow.open { transform: rotate(90deg); }
+        .collapse-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, opacity 0.3s;
+            opacity: 0;
+        }
+        .collapse-body.open {
+            max-height: 5000px;
+            opacity: 1;
+            transition: max-height 0.6s ease-in, opacity 0.3s;
+        }
+        .member-summary-badges {
+            display: flex; gap: 6px; flex-wrap: wrap;
+        }
+
+        /* Agenda Steps */
+        .agenda-section {
+            background: rgba(255,255,255,0.6);
+            backdrop-filter: var(--glass-blur);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .agenda-section .section-title { margin-bottom: 12px; }
+        .agenda-steps {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            padding-bottom: 4px;
+        }
+        .agenda-step {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 12px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            min-width: fit-content;
+            transition: all 0.3s;
+        }
+        .agenda-step.active {
+            background: var(--primary-light);
+            border-color: rgba(0,113,227,0.3);
+        }
+        .agenda-step.done {
+            background: rgba(52,199,89,0.08);
+            border-color: rgba(52,199,89,0.3);
+        }
+        .step-indicator {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+        .agenda-step.active .step-indicator { color: var(--primary); }
+        .agenda-step.done .step-indicator { color: var(--success); }
+        .step-label { font-size: 0.78rem; font-weight: 600; color: var(--text); white-space: nowrap; }
+        .step-status { font-size: 0.68rem; color: var(--text-muted); white-space: nowrap; }
+        .agenda-step.done .step-status { color: var(--success); }
+        .agenda-step.active .step-status { color: var(--primary); }
+        @media (max-width: 768px) {
+            .agenda-steps { gap: 4px; }
+            .agenda-step { padding: 6px 10px; }
+            .step-label { font-size: 0.7rem; }
+            .step-status { font-size: 0.6rem; }
+        }
+
+        /* Password Lock */
+        .lock-overlay {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.6s, transform 0.6s;
+            overflow: hidden;
+        }
+        .lock-overlay::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: #1a1a2e;
+        }
+        .lock-overlay::after { content: none; }
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            animation: blobMove 5s ease-in-out infinite alternate;
+        }
+        .blob-blue { background: #4285F4; width: 45vmax; height: 45vmax; top: -10%; left: -10%; animation-delay: 0s; }
+        .blob-red { background: #EA4335; width: 40vmax; height: 40vmax; top: -5%; right: -10%; animation-delay: -1.2s; }
+        .blob-yellow { background: #FBBC05; width: 38vmax; height: 38vmax; bottom: -10%; left: 10%; animation-delay: -2.5s; }
+        .blob-green { background: #34A853; width: 42vmax; height: 42vmax; bottom: -5%; right: -5%; animation-delay: -3.8s; }
+        @keyframes blobMove {
+            0% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(5vw, 8vh) scale(1.05); }
+            66% { transform: translate(-3vw, 5vh) scale(0.95); }
+            100% { transform: translate(4vw, -4vh) scale(1.02); }
+        }
+        .lock-overlay.unlocked {
+            opacity: 0;
+            transform: scale(1.05);
+            pointer-events: none;
+        }
+        .lock-box {
+            position: relative;
+            z-index: 1;
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: saturate(180%) blur(30px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 24px;
+            padding: 48px 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            max-width: 380px;
+            width: 90%;
+        }
+        .lock-box h2 { font-size: 1.5rem; margin-bottom: 8px; color: #fff; }
+        .lock-box .lock-icon { font-size: 3rem; margin-bottom: 16px; }
+        .lock-box .hint { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+        .lock-box input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 12px;
+            font-size: 1rem;
+            text-align: center;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+        .lock-box input::placeholder { color: rgba(255,255,255,0.4); }
+        .lock-box input:focus { border-color: rgba(255,255,255,0.6); box-shadow: 0 0 20px rgba(255,255,255,0.1); }
+        .lock-box .lock-btn {
+            margin-top: 16px;
+            width: 100%;
+            padding: 12px;
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+        .lock-box .lock-btn:hover { background: rgba(255,255,255,0.25); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,255,255,0.1); }
+        .lock-box .error { color: #ff6b6b; font-size: 0.82rem; margin-top: 10px; display: none; }
+
+    </style>
+</head>
+<body>
+
+    <!-- Password Lock -->
+    <div class="lock-overlay" id="lockOverlay">
+        <div class="blob blob-blue"></div>
+        <div class="blob blob-red"></div>
+        <div class="blob blob-yellow"></div>
+        <div class="blob blob-green"></div>
+        <div class="lock-box">
+            <div class="lock-icon">🔒</div>
+            <h2>EITS 割り勘マネージャー</h2>
+            <p class="hint">ヒント: ShinoのAlias</p>
+            <input type="password" id="lockPass" placeholder="パスワードを入力" autocomplete="off" onkeydown="if(event.key==='Enter'){event.preventDefault();document.querySelector('.lock-btn').click();}">
+            <button class="lock-btn" onclick="unlock()">ロック解除</button>
+            <p class="error" id="lockError">❌ パスワードが違います</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="parallax-header" id="parallaxHeader">
+            <div class="parallax-bg" id="parallaxBg"></div>
+            <div class="header-blob header-blob-1"></div>
+            <div class="header-blob header-blob-2"></div>
+            <div class="header-blob header-blob-3"></div>
+            <div class="header-blob header-blob-4"></div>
+            <div class="parallax-content">
+                <h1>🍻 EITS 割り勘マネージャー</h1>
+                <p>歓送迎会・チーム飲み会の会費を簡単に按分計算</p>
+            </div>
+        </div>
+
+
+        <!-- Agenda / Progress Panel -->
+        <div class="section agenda-section">
+            <div class="section-title" style="margin-bottom:12px;"><span class="icon">📋</span> 進捗</div>
+            <div class="agenda-steps" id="agendaSteps">
+                <div class="agenda-step" data-step="members">
+                    <div class="step-indicator" id="stepMembers">①</div>
+                    <div class="step-content">
+                        <div class="step-label">メンバー</div>
+                        <div class="step-status" id="statusMembers">未入力</div>
+                    </div>
+                </div>
+                <div class="agenda-step" data-step="amounts">
+                    <div class="step-indicator" id="stepAmounts">②</div>
+                    <div class="step-content">
+                        <div class="step-label">金額</div>
+                        <div class="step-status" id="statusAmounts">未入力</div>
+                    </div>
+                </div>
+                <div class="agenda-step" data-step="checks">
+                    <div class="step-indicator" id="stepChecks">③</div>
+                    <div class="step-content">
+                        <div class="step-label">参加✓</div>
+                        <div class="step-status" id="statusChecks">未選択</div>
+                    </div>
+                </div>
+                <div class="agenda-step" data-step="calc">
+                    <div class="step-indicator" id="stepCalc">④</div>
+                    <div class="step-content">
+                        <div class="step-label">計算</div>
+                        <div class="step-status" id="statusCalc">待機中</div>
+                    </div>
+                </div>
+                <div class="agenda-step" data-step="share">
+                    <div class="step-indicator" id="stepShare">⑤</div>
+                    <div class="step-content">
+                        <div class="step-label">共有</div>
+                        <div class="step-status" id="statusShare">待機中</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Member Section -->
+        <div class="section">
+            <div class="collapse-header" onclick="toggleMemberList()">
+                <div class="collapse-summary">
+                    <span class="collapse-arrow open" id="memberArrow">▶</span>
+                    <div class="section-title" style="margin-bottom:0;">
+                        <span class="icon">👥</span> メンバー
+                        <span class="badge badge-blue" id="memberCount">0人</span>
+                    </div>
+                </div>
+                <div class="member-summary-badges" id="memberSummary">
+                    <span class="badge badge-green" id="summaryL6">L6: 0</span>
+                    <span class="badge badge-green" id="summaryTL">TL: 0</span>
+                    <span class="badge badge-green" id="summaryL5">L5: 0</span>
+                    <span class="badge badge-green" id="summaryL4">L4: 0</span>
+                </div>
+            </div>
+            <div class="collapse-body open" id="memberBody">
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="loadEITSPaid()">📋 Paidメンバー読込</button>
+                <button class="btn btn-outline" onclick="loadAllEITS()">👥 EITS全員読込</button>
+                <button class="btn btn-warning" onclick="openBulkPaste()">📝 一括入力（コピペ）</button>
+                <button class="btn btn-outline btn-small" onclick="addParticipantRow()">＋ 行追加</button>
+                <button class="btn btn-danger btn-small" onclick="clearParticipants()">🗑 クリア</button>
+            </div>
+            <div class="btn-group" style="margin-bottom:12px;">
+                <button class="btn btn-outline btn-small" onclick="bulkCheck('gift',true)">🎁全選択</button>
+                <button class="btn btn-outline btn-small" onclick="bulkCheck('gift',false)">🎁全解除</button>
+                <button class="btn btn-outline btn-small" onclick="bulkCheck('primary',true)">1次 全選択</button>
+                <button class="btn btn-outline btn-small" onclick="bulkCheck('primary',false)">1次 全解除</button>
+                <button class="btn btn-outline btn-small" onclick="bulkCheck('secondary',true)">2次 全選択</button>
+                <button class="btn btn-outline btn-small" onclick="bulkCheck('secondary',false)">2次 全解除</button>
+            </div>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="min-width:140px;">名前</th>
+                            <th style="width:110px;">Level</th>
+                            <th style="width:70px;text-align:center;white-space:nowrap;"><input type="checkbox" id="checkAllGift" onchange="checkAllColumn('gift')"> 送別品
+                            </th>
+                            <th style="width:55px;text-align:center;white-space:nowrap;"><input type="checkbox" id="checkAllPrimary" onchange="checkAllColumn('primary')"> 1次
+                            </th>
+                            <th style="width:55px;text-align:center;white-space:nowrap;"><input type="checkbox" id="checkAllSecondary" onchange="checkAllColumn('secondary')"> 2次
+                            </th>
+                            <th style="width:100px;">支払額</th>
+                            <th style="width:50px;"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="participantTableBody"></tbody>
+                </table>
+            </div>
+            </div><!-- /collapse-body -->
+        </div>
+
+        <!-- Gift Section -->
+        <div class="section" id="giftSection">
+            <div class="section-title"><span class="icon">🎁</span> 送別品・プレゼント</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>品名</th>
+                        <th style="width:120px;">金額</th>
+                        <th style="width:50px;"></th>
+                    </tr>
+                </thead>
+                <tbody id="giftTableBody">
+                    <tr>
+                        <td><input type="text" class="gift-item" placeholder="例: プレゼント"></td>
+                        <td><input type="number" class="gift-amount" placeholder="0"></td>
+                        <td><button class="btn btn-danger btn-small" onclick="deleteGiftRow(this)">×</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px;">
+                <button class="btn btn-outline btn-small" onclick="addGiftRow()">＋ 行追加</button>
+                <div style="font-weight:700;">送別品合計: <span id="giftTotal">¥0</span></div>
+            </div>
+        </div>
+
+        <!-- Amount & Ratio Section -->
+        <div class="section" id="amountSection">
+            <div class="section-title"><span class="icon">💰</span> 金額設定</div>
+            <div style="margin-bottom:20px;">
+              <div class="grid-2" style="margin-bottom:12px;">
+                <div>
+                    <label style="font-size:0.8rem;color:var(--text-secondary);">一次会 合計</label>
+                    <input type="number" id="primaryTotal" placeholder="0">
+                </div>
+                <div>
+                    <label style="font-size:0.8rem;color:var(--text-secondary);">二次会 合計</label>
+                    <input type="number" id="secondaryTotal" placeholder="0">
+                </div>
+              </div>
+              <details style="margin-top:8px;padding:12px;background:var(--bg);border-radius:10px;border:1px solid var(--border);">
+                <summary style="font-size:0.8rem;font-weight:600;color:var(--primary);cursor:pointer;">💡 1人あたり×人数で計算する</summary>
+                <div class="grid-2" style="margin-top:12px;gap:8px;">
+                  <div>
+                    <label style="font-size:0.75rem;color:var(--text-secondary);">1次会 1人あたり</label>
+                    <input type="number" id="primaryPerPerson" placeholder="例: 5000">
+                  </div>
+                  <div>
+                    <label style="font-size:0.75rem;color:var(--text-secondary);">1次会 人数</label>
+                    <input type="number" id="primaryCount" placeholder="例: 20">
+                  </div>
+                  <div>
+                    <label style="font-size:0.75rem;color:var(--text-secondary);">2次会 1人あたり</label>
+                    <input type="number" id="secondaryPerPerson" placeholder="例: 3000">
+                  </div>
+                  <div>
+                    <label style="font-size:0.75rem;color:var(--text-secondary);">2次会 人数</label>
+                    <input type="number" id="secondaryCount" placeholder="例: 10">
+                  </div>
+                </div>
+                <button class="btn btn-outline btn-small" style="margin-top:12px;" onclick="calcFromPerPerson()">→ 合計に反映</button>
+              </details>
+            </div>
+            <div style="margin-bottom:16px;">
+                <label style="font-size:0.8rem;color:var(--text-secondary);display:block;margin-bottom:8px;">レベル別 比率</label>
+                <div class="grid-4">
+                    <div class="ratio-group"><label>L4</label><input type="number" id="ratioL4" value="1.0" step="0.1"></div>
+                    <div class="ratio-group"><label>L5</label><input type="number" id="ratioL5" value="1.3" step="0.1"></div>
+                    <div class="ratio-group"><label>TL</label><input type="number" id="ratioTL" value="1.5" step="0.1"></div>
+                    <div class="ratio-group"><label>L6</label><input type="number" id="ratioL6" value="2.0" step="0.1"></div>
+                </div>
+            </div>
+            <div style="text-align:center;">
+                <button class="btn btn-success" onclick="calculate()" style="font-size:1rem;padding:12px 40px;">⚡ 計算する</button>
+            </div>
+            <div id="diffDisplay" class="diff-display" style="display:none;"></div>
+        </div>
+
+        <!-- Payment Info Section -->
+        <div class="section" id="paymentSection">
+            <div class="section-title"><span class="icon">💳</span> 支払い情報</div>
+            <div class="grid-2">
+                <div>
+                    <label style="font-size:0.8rem;color:var(--text-secondary);">幹事名</label>
+                    <input type="text" id="organizerName" placeholder="幹事の名前">
+                </div>
+                <div>
+                    <label style="font-size:0.8rem;color:var(--text-secondary);">支払い期限</label>
+                    <input type="date" id="paymentDeadline">
+                </div>
+            </div>
+            <div style="margin-top:12px;">
+                <label style="font-size:0.8rem;color:var(--text-secondary);">PayPayリンク</label>
+                <input type="text" id="paypayLink" placeholder="https://qr.paypay.ne.jp/...">
+            </div>
+            <div class="grid-4" style="margin-top:12px;">
+                <div>
+                    <label style="font-size:0.8rem;color:var(--text-secondary);">銀行名</label>
+                    <input type="text" id="bankName" placeholder="銀行名">
+                </div>
+                <div>
+                    <label style="font-size:0.8rem;color:var(--text-secondary);">支店名</label>
+                    <input type="text" id="branchName" placeholder="支店名">
+                </div>
+                <div>
+                    <label style="font-size:0.8rem;color:var(--text-secondary);">口座番号</label>
+                    <input type="text" id="accountNumber" placeholder="口座番号">
+                </div>
+                <div>
+                    <label style="font-size:0.8rem;color:var(--text-secondary);">口座名義</label>
+                    <input type="text" id="accountName" placeholder="口座名義">
+                </div>
+            </div>
+        </div>
+
+        <!-- Slack Message Section -->
+        <div class="section">
+            <div class="section-title"><span class="icon">📤</span> Slack連絡文</div>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="generateSlackMessage()">📝 連絡文を生成</button>
+                <button class="btn btn-success" onclick="copyToClipboard()">📋 コピー</button>
+            </div>
+            <div class="slack-output" id="slackOutput">ここに連絡文が生成されます...</div>
+        </div>
+
+        <!-- Data Management -->
+        <div class="section">
+            <div class="section-title"><span class="icon">💾</span> データ管理</div>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="saveToStorage()">💾 保存</button>
+                <button class="btn btn-outline" onclick="loadFromStorage()">📂 復元</button>
+                <button class="btn btn-danger btn-small" onclick="clearAllData()">🗑 全データクリア</button>
+            </div>
+            <p style="font-size:0.75rem;color:var(--text-muted);">※データはブラウザのlocalStorageに保存されます（このPC・ブラウザ限定）</p>
+        </div>
+    </div>
+
+    <!-- Bulk Paste Modal -->
+    <div class="modal-overlay" id="bulkModal">
+        <div class="modal">
+            <h3>📝 メンバー一括入力</h3>
+            <p>以下のフォーマットでコピペしてください（改行区切り）：</p>
+            <div style="background:var(--bg);padding:10px;border-radius:8px;font-size:0.75rem;margin-bottom:12px;color:var(--text-secondary);">
+                <code>名前[TABまたはカンマ]レベル</code><br>
+                例:<br>
+                <code>田中太郎, L5</code><br>
+                <code>鈴木花子	L4</code><br>
+                <code>佐藤一郎</code> ← レベル省略時はL5
+            </div>
+            <textarea id="bulkInput" placeholder="ここにメンバーリストを貼り付け...
+
+名前, レベル
+名前	レベル
+名前（レベル省略→L5）"></textarea>
+            <div class="modal-btns">
+                <button class="btn btn-outline" onclick="closeBulkPaste()">キャンセル</button>
+                <button class="btn btn-primary" onclick="applyBulkPaste()">適用</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // ===== PASSWORD LOCK =====
+        var _lockFails = 0;
+        function unlock() {
+            var pass = document.getElementById('lockPass').value;
+            if (pass === 'tmshino') {
+                document.getElementById('lockOverlay').classList.add('unlocked');
+                try { sessionStorage.setItem('warikan_unlocked', '1'); } catch(e) {}
+                _lockFails = 0;
+            } else {
+                _lockFails++;
+                if (_lockFails >= 2) {
+                    window.location.href = 'https://www.google.com';
+                    return;
+                }
+                document.getElementById('lockError').style.display = 'block';
+                document.getElementById('lockError').textContent = '❌ パスワードが違います（あと' + (2 - _lockFails) + '回）';
+                document.getElementById('lockPass').value = '';
+                document.getElementById('lockPass').focus();
+            }
+        }
+        // Lock init moved to main DOMContentLoaded
+
+        const STORAGE_KEY = 'eitsWarikanManager';
+
+        // ===== EITS MEMBER MASTER DATA =====
+        const EITS_MEMBERS = {
+            "paid": [
+                {name:"Hayashi Saki",alias:"sakihay",role:"TL"},
+                {name:"Izawa Mariko",alias:"izawm",role:"TL"},
+                {name:"Nakamura Toru",alias:"torun",role:"L6"},
+                {name:"Oh Moonsun",alias:"omoonsun",role:"L5"},
+                {name:"Oki Ryosuke",alias:"okiryo",role:"L5"},
+                {name:"Nakajima Ryota",alias:"ryotankj",role:"L6"},
+                {name:"Naito Saki",alias:"",role:"L4"},
+                {name:"Murakami Arisa",alias:"muraari",role:"L5"},
+                {name:"Sato Ayumu",alias:"satayumu",role:"L5"},
+                {name:"Mori Daisuke",alias:"moridice",role:"L5"},
+                {name:"Hama Ayaka",alias:"ayakahm",role:"L5"},
+                {name:"Lee Yun",alias:"yunleeu",role:"L4"},
+                {name:"Tsuchiya Ryota",alias:"ttryota",role:"L4"},
+                {name:"Masuda Mantaro",alias:"mantaro",role:"TL"},
+                {name:"Sakata Rokutoshi",alias:"rokutosh",role:"L5"},
+                {name:"Shinozuka Tomohiro",alias:"tmshino",role:"L5"},
+                {name:"Gao Yuan",alias:"ygomz",role:"L4"},
+                {name:"Inoue Atsushi",alias:"inoueats",role:"TL"},
+                {name:"Mita Ryohei",alias:"mitaryoi",role:"L4"},
+                {name:"Hata Yasunori",alias:"amzyhata",role:"TL"},
+                {name:"Shimamoto Mikako",alias:"shmica",role:"L4"},
+                {name:"Murakami Takuya",alias:"takuyamr",role:"L4"},
+                {name:"Yamazaki Mamoru",alias:"mamoruya",role:"L4"},
+                {name:"Adachi Yuta",alias:"adachiyt",role:"L4"},
+                {name:"Inoue Ryoga",alias:"ryogaino",role:"L4"},
+                {name:"Kainuma Hidetaka",alias:"hdkai",role:"L5"},
+                {name:"Ozaki Kotaro",alias:"",role:"L4"},
+                {name:"Hayashi Mai",alias:"",role:"L4"}
+            ]
+        };
+
+        // ===== INITIALIZATION =====
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeParticipants();
+            attachGiftTableEvents();
+            attachInputEvents();
+            updateAgenda();
+        });
+
+        function initializeParticipants() {
+            const tbody = document.getElementById('participantTableBody');
+            if (tbody.children.length === 0) {
+                for (let i = 0; i < 5; i++) addParticipantRow();
+            }
+            updateMemberCount();
+        }
+
+        // ===== EITS MEMBER LOADING =====
+        function loadEITSPaid() {
+            loadMembers(EITS_MEMBERS.paid);
+        }
+
+        function loadAllEITS() { loadMembers(EITS_MEMBERS.paid); }
+
+        function loadMembers(members) {
+            const tbody = document.getElementById('participantTableBody');
+            tbody.innerHTML = '';
+            members.forEach(m => {
+                addParticipantRow(m.name, m.role);
+            });
+            updateMemberCount();
+            saveToStorage();
+        }
+
+        // ===== BULK PASTE =====
+        function openBulkPaste() {
+            document.getElementById('bulkModal').classList.add('active');
+            document.getElementById('bulkInput').focus();
+        }
+
+        function closeBulkPaste() {
+            document.getElementById('bulkModal').classList.remove('active');
+            document.getElementById('bulkInput').value = '';
+        }
+
+        function applyBulkPaste() {
+            const text = document.getElementById('bulkInput').value.trim();
+            if (!text) { closeBulkPaste(); return; }
+
+            const lines = text.split('\n').filter(l => l.trim());
+            const tbody = document.getElementById('participantTableBody');
+            tbody.innerHTML = '';
+
+            lines.forEach(line => {
+                let parts;
+                if (line.includes('\t')) {
+                    parts = line.split('\t');
+                } else if (line.includes(',')) {
+                    parts = line.split(',');
+                } else {
+                    parts = [line.trim()];
+                }
+                const name = (parts[0] || '').trim();
+                let role = (parts[1] || 'L5').trim().toUpperCase();
+                if (!['L4','L5','TL','L6'].includes(role)) role = 'L5';
+                if (name) addParticipantRow(name, role);
+            });
+
+            updateMemberCount();
+            saveToStorage();
+            closeBulkPaste();
+        }
+
+        // ===== PARTICIPANT TABLE =====
+        function addParticipantRow(name='', role='L5') {
+            const tbody = document.getElementById('participantTableBody');
+            const row = tbody.insertRow();
+            row.innerHTML = `
+                <td><input type="text" class="participant-name" value="${name}" placeholder="名前"></td>
+                <td>
+                    <select class="participant-role">
+                        <option value="L4" ${role==='L4'?'selected':''}>L4</option>
+                        <option value="L5" ${role==='L5'?'selected':''}>L5</option>
+                        <option value="TL" ${role==='TL'?'selected':''}>TL</option>
+                        <option value="L6" ${role==='L6'?'selected':''}>L6</option>
+                    </select>
+                </td>
+                <td style="text-align:center;"><input type="checkbox" class="check-gift"></td>
+                <td style="text-align:center;"><input type="checkbox" class="check-primary"></td>
+                <td style="text-align:center;"><input type="checkbox" class="check-secondary"></td>
+                <td><input type="text" class="payment-amount" readonly style="background:var(--bg);font-weight:700;"></td>
+                <td><button class="btn btn-danger btn-small" onclick="deleteParticipantRow(this)">×</button></td>
+            `;
+            const nameInput = row.querySelector('.participant-name');
+            nameInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || (e.key === 'Tab' && !e.shiftKey)) {
+                    e.preventDefault();
+                    const nextRow = this.closest('tr').nextElementSibling;
+                    if (nextRow) {
+                        nextRow.querySelector('.participant-name').focus();
+                    } else {
+                        addParticipantRow();
+                        setTimeout(() => tbody.lastElementChild.querySelector('.participant-name').focus(), 0);
+                    }
+                }
+            });
+            row.querySelectorAll('input, select').forEach(input => {
+                input.addEventListener('change', () => { saveToStorage(); updateMemberCount(); });
+                input.addEventListener('input', () => { saveToStorage(); updateMemberCount(); });
+            });
+        }
+
+        function deleteParticipantRow(btn) {
+            btn.closest('tr').remove();
+            updateMemberCount();
+            saveToStorage();
+        }
+
+        function clearParticipants() {
+            if (!confirm('メンバーリストをクリアしますか？')) return;
+            document.getElementById('participantTableBody').innerHTML = '';
+            for (let i = 0; i < 5; i++) addParticipantRow();
+            updateMemberCount();
+            saveToStorage();
+        }
+
+        function updateMemberCount() {
+            const names = document.querySelectorAll('.participant-name');
+            let count = 0;
+            names.forEach(n => { if (n.value.trim()) count++; });
+            document.getElementById('memberCount').textContent = count + '人';
+            updateMemberSummary();
+        }
+
+        function checkAllColumn(type) {
+            const checkboxId = 'checkAll' + type.charAt(0).toUpperCase() + type.slice(1);
+            const isChecked = document.getElementById(checkboxId).checked;
+            document.querySelectorAll('.check-' + type).forEach(cb => cb.checked = isChecked);
+            saveToStorage();
+        }
+
+        function bulkCheck(type, checked) {
+            document.querySelectorAll('.check-' + type).forEach(cb => cb.checked = checked);
+            const checkboxId = 'checkAll' + type.charAt(0).toUpperCase() + type.slice(1);
+            document.getElementById(checkboxId).checked = checked;
+            saveToStorage();
+        }
+
+        // ===== GIFT TABLE =====
+        function attachGiftTableEvents() {
+            const tbody = document.getElementById('giftTableBody');
+            tbody.addEventListener('input', function(e) {
+                if (e.target.classList.contains('gift-amount')) updateGiftTotal();
+                saveToStorage();
+            });
+            tbody.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    var target = e.target;
+                    if (target.classList.contains('gift-item') || target.classList.contains('gift-amount')) {
+                        var row = target.closest('tr');
+                        var nextRow = row.nextElementSibling;
+                        if (nextRow) {
+                            nextRow.querySelector('.gift-item').focus();
+                        } else {
+                            addGiftRow();
+                            setTimeout(function() { tbody.lastElementChild.querySelector('.gift-item').focus(); }, 0);
+                        }
+                    }
+                }
+            });
+        }
+
+        function addGiftRow() {
+            const tbody = document.getElementById('giftTableBody');
+            const row = tbody.insertRow();
+            row.innerHTML = `
+                <td><input type="text" class="gift-item" placeholder="例: プレゼント"></td>
+                <td><input type="number" class="gift-amount" placeholder="0"></td>
+                <td><button class="btn btn-danger btn-small" onclick="deleteGiftRow(this)">×</button></td>
+            `;
+        }
+
+        function deleteGiftRow(btn) {
+            btn.closest('tr').remove();
+            updateGiftTotal();
+            saveToStorage();
+        }
+
+        function updateGiftTotal() {
+            let total = 0;
+            document.querySelectorAll('.gift-amount').forEach(input => total += parseFloat(input.value) || 0);
+            document.getElementById('giftTotal').textContent = '¥' + total.toLocaleString();
+        }
+
+        function getGiftTotal() {
+            let total = 0;
+            document.querySelectorAll('.gift-amount').forEach(input => total += parseFloat(input.value) || 0);
+            return total;
+        }
+
+        // ===== INPUT EVENTS =====
+        function attachInputEvents() {
+            // Input events are attached in DOMContentLoaded below
+        }
+
+        // ===== CALCULATION =====
+        function calculate() {
+            const giftTotal = getGiftTotal();
+            const primaryTotal = parseFloat(document.getElementById('primaryTotal').value) || 0;
+            const secondaryTotal = parseFloat(document.getElementById('secondaryTotal').value) || 0;
+            const ratios = {
+                'L4': parseFloat(document.getElementById('ratioL4').value) || 1.0,
+                'L5': parseFloat(document.getElementById('ratioL5').value) || 1.3,
+                'TL': parseFloat(document.getElementById('ratioTL').value) || 1.5,
+                'L6': parseFloat(document.getElementById('ratioL6').value) || 2.0
+            };
+
+            const rows = document.querySelectorAll('#participantTableBody tr');
+            const participants = [];
+            rows.forEach(row => {
+                const name = row.querySelector('.participant-name').value.trim();
+                if (name) {
+                    participants.push({
+                        row, name,
+                        role: row.querySelector('.participant-role').value,
+                        primary: row.querySelector('.check-primary').checked,
+                        gift: row.querySelector('.check-gift').checked,
+                        secondary: row.querySelector('.check-secondary').checked,
+                        ratio: ratios[row.querySelector('.participant-role').value]
+                    });
+                }
+            });
+
+            const giftCalc = calcCategory(participants.filter(p => p.gift), giftTotal, ratios);
+            const primaryCalc = calcCategory(participants.filter(p => p.primary), primaryTotal, ratios);
+            const secondaryCalc = calcCategory(participants.filter(p => p.secondary), secondaryTotal, ratios);
+
+            let totalCalc = 0;
+            participants.forEach(p => {
+                let amount = 0;
+                if (p.gift) amount += giftCalc[p.name] || 0;
+                if (p.primary) amount += primaryCalc[p.name] || 0;
+                if (p.secondary) amount += secondaryCalc[p.name] || 0;
+                p.row.querySelector('.payment-amount').value = '¥' + amount.toLocaleString();
+                p.row.classList.add('row-calculated');
+                totalCalc += amount;
+            });
+
+            rows.forEach(row => {
+                const name = row.querySelector('.participant-name').value.trim();
+                if (!name) row.classList.add('hidden-row');
+                else row.classList.remove('hidden-row');
+            });
+
+            const actualTotal = giftTotal + primaryTotal + secondaryTotal;
+            const diff = totalCalc - actualTotal;
+            const diffEl = document.getElementById('diffDisplay');
+            diffEl.style.display = 'block';
+            if (diff === 0) {
+                diffEl.className = 'diff-display diff-zero';
+                diffEl.innerHTML = '✅ 差分: ¥0（ピッタリ！）';
+            } else if (diff > 0) {
+                diffEl.className = 'diff-display diff-positive';
+                diffEl.innerHTML = '⚠️ 差分: +¥' + diff.toLocaleString() + '（按分合計が実費より多い）';
+            } else {
+                diffEl.className = 'diff-display diff-negative';
+                diffEl.innerHTML = '⚠️ 差分: -¥' + Math.abs(diff).toLocaleString() + '（按分合計が実費より少ない）';
+            }
+
+            // Auto-collapse sections after calculation
+            document.getElementById('memberBody').classList.remove('open');
+            document.getElementById('memberArrow').classList.remove('open');
+            var sectionsToCollapse = ['giftSection', 'amountSection'];
+            sectionsToCollapse.forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el) el.classList.add('collapsed');
+            });
+            // Add click-to-expand on collapsed sections
+            document.querySelectorAll('.section.collapsed').forEach(function(s) {
+                s.onclick = function() { this.classList.remove('collapsed'); this.onclick = null; };
+            });
+            saveToStorage();
+        }
+
+        function calcCategory(participants, total, ratios) {
+            if (!participants.length || !total) return {};
+            const totalRatio = participants.reduce((s, p) => s + p.ratio, 0);
+            const payments = {};
+            participants.forEach(p => {
+                payments[p.name] = Math.ceil((total * p.ratio) / totalRatio);
+            });
+            return payments;
+        }
+
+        // ===== SLACK MESSAGE =====
+        function generateSlackMessage() {
+            const giftTotal = getGiftTotal();
+            const primaryTotal = parseFloat(document.getElementById('primaryTotal').value) || 0;
+            const secondaryTotal = parseFloat(document.getElementById('secondaryTotal').value) || 0;
+            const totalAmount = giftTotal + primaryTotal + secondaryTotal;
+            const organizerName = document.getElementById('organizerName').value || '幹事';
+            const deadline = document.getElementById('paymentDeadline').value;
+            const paypayLink = document.getElementById('paypayLink').value;
+            const bankName = document.getElementById('bankName').value;
+            const branchName = document.getElementById('branchName').value;
+            const accountNumber = document.getElementById('accountNumber').value;
+            const accountName = document.getElementById('accountName').value;
+
+            let msg = '【歓送迎会 会費のお知らせ】\n\n';
+            msg += '=== 内訳 ===\n';
+            if (giftTotal > 0) {
+                msg += '■ 送別品\n';
+                document.querySelectorAll('#giftTableBody tr').forEach(row => {
+                    const item = row.querySelector('.gift-item').value;
+                    const amount = parseFloat(row.querySelector('.gift-amount').value) || 0;
+                    if (item && amount > 0) msg += `  ・${item}: ¥${amount.toLocaleString()}\n`;
+                });
+                msg += `  小計: ¥${giftTotal.toLocaleString()}\n\n`;
+            }
+            if (primaryTotal > 0) msg += `■ 一次会: ¥${primaryTotal.toLocaleString()}\n`;
+            if (secondaryTotal > 0) msg += `■ 二次会: ¥${secondaryTotal.toLocaleString()}\n`;
+            msg += `\n【総額】¥${totalAmount.toLocaleString()}\n\n`;
+            msg += '=== 各自の支払額 ===\n';
+            document.querySelectorAll('#participantTableBody tr:not(.hidden-row)').forEach(row => {
+                const name = row.querySelector('.participant-name').value.trim();
+                const amount = row.querySelector('.payment-amount').value;
+                if (name && amount) msg += `${name}: ${amount}\n`;
+            });
+            msg += '\n=== お支払い方法 ===\n';
+            if (paypayLink) msg += `【PayPay】\n${paypayLink}\n\n`;
+            if (bankName && accountNumber) {
+                msg += '【銀行振込】\n';
+                if (bankName) msg += `銀行名: ${bankName}\n`;
+                if (branchName) msg += `支店名: ${branchName}\n`;
+                if (accountNumber) msg += `口座番号: ${accountNumber}\n`;
+                if (accountName) msg += `口座名義: ${accountName}\n`;
+                msg += '\n';
+            }
+            if (deadline) {
+                const d = new Date(deadline);
+                msg += `⏰ お支払い期限: ${d.getMonth()+1}月${d.getDate()}日までに\n\n`;
+            }
+            msg += `お問い合わせ: ${organizerName}\n`;
+            msg += '\nよろしくお願いいたします！';
+            document.getElementById('slackOutput').textContent = msg;
+        }
+
+        function copyToClipboard() {
+            const text = document.getElementById('slackOutput').textContent;
+            if (text === 'ここに連絡文が生成されます...') { alert('先に連絡文を生成してください'); return; }
+            navigator.clipboard.writeText(text).then(() => alert('✅ コピーしました！'));
+        }
+
+        // ===== STORAGE =====
+        function saveToStorage() {
+            const data = {
+                gifts: [],
+                primaryTotal: document.getElementById('primaryTotal').value,
+                secondaryTotal: document.getElementById('secondaryTotal').value,
+                ratios: {
+                    L4: document.getElementById('ratioL4').value,
+                    L5: document.getElementById('ratioL5').value,
+                    TL: document.getElementById('ratioTL').value,
+                    L6: document.getElementById('ratioL6').value
+                },
+                organizer: {
+                    name: document.getElementById('organizerName').value,
+                    deadline: document.getElementById('paymentDeadline').value,
+                    paypay: document.getElementById('paypayLink').value,
+                    bank: document.getElementById('bankName').value,
+                    branch: document.getElementById('branchName').value,
+                    account: document.getElementById('accountNumber').value,
+                    accountName: document.getElementById('accountName').value
+                },
+                participants: []
+            };
+            document.querySelectorAll('#giftTableBody tr').forEach(row => {
+                data.gifts.push({
+                    item: row.querySelector('.gift-item').value,
+                    amount: row.querySelector('.gift-amount').value
+                });
+            });
+            document.querySelectorAll('#participantTableBody tr').forEach(row => {
+                data.participants.push({
+                    name: row.querySelector('.participant-name').value,
+                    role: row.querySelector('.participant-role').value,
+                    primary: row.querySelector('.check-primary').checked,
+                    gift: row.querySelector('.check-gift').checked,
+                    secondary: row.querySelector('.check-secondary').checked
+                });
+            });
+            try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch(e) {}
+            updateAgenda();
+        }
+
+        function loadFromStorage() {
+            var saved; try { saved = localStorage.getItem(STORAGE_KEY); } catch(e) { saved = null; }
+            if (!saved) { alert('保存データがありません'); return; }
+            try {
+                const data = JSON.parse(saved);
+                if (data.primaryTotal) document.getElementById('primaryTotal').value = data.primaryTotal;
+                if (data.secondaryTotal) document.getElementById('secondaryTotal').value = data.secondaryTotal;
+                if (data.ratios) {
+                    document.getElementById('ratioL4').value = data.ratios.L4 || 1.0;
+                    document.getElementById('ratioL5').value = data.ratios.L5 || 1.3;
+                    document.getElementById('ratioTL').value = data.ratios.TL || 1.5;
+                    document.getElementById('ratioL6').value = data.ratios.L6 || 2.0;
+                }
+                if (data.organizer) {
+                    document.getElementById('organizerName').value = data.organizer.name || '';
+                    document.getElementById('paymentDeadline').value = data.organizer.deadline || '';
+                    document.getElementById('paypayLink').value = data.organizer.paypay || '';
+                    document.getElementById('bankName').value = data.organizer.bank || '';
+                    document.getElementById('branchName').value = data.organizer.branch || '';
+                    document.getElementById('accountNumber').value = data.organizer.account || '';
+                    document.getElementById('accountName').value = data.organizer.accountName || '';
+                }
+                if (data.gifts && data.gifts.length > 0) {
+                    const tbody = document.getElementById('giftTableBody');
+                    tbody.innerHTML = '';
+                    data.gifts.forEach(gift => {
+                        const row = tbody.insertRow();
+                        row.innerHTML = `
+                            <td><input type="text" class="gift-item" value="${gift.item}"></td>
+                            <td><input type="number" class="gift-amount" value="${gift.amount}"></td>
+                            <td><button class="btn btn-danger btn-small" onclick="deleteGiftRow(this)">×</button></td>
+                        `;
+                    });
+                    updateGiftTotal();
+                }
+                if (data.participants && data.participants.length > 0) {
+                    const tbody = document.getElementById('participantTableBody');
+                    tbody.innerHTML = '';
+                    data.participants.forEach(p => {
+                        addParticipantRow(p.name, p.role);
+                        const row = tbody.lastElementChild;
+                        row.querySelector('.check-primary').checked = p.primary;
+                        row.querySelector('.check-gift').checked = p.gift;
+                        row.querySelector('.check-secondary').checked = p.secondary;
+                    });
+                }
+                updateMemberCount();
+                alert('✅ データを復元しました');
+            } catch(e) {
+                alert('❌ データ復元に失敗: ' + e.message);
+            }
+        }
+
+        function clearAllData() {
+            if (confirm('本当にすべてのデータをクリアしますか？')) {
+                try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+                location.reload();
+            }
+        }
+
+
+        // ===== PARALLAX =====
+        window.addEventListener('scroll', function() {
+            var scrolled = window.pageYOffset;
+            var bg = document.getElementById('parallaxBg');
+            if (bg) bg.style.transform = 'translateY(' + (scrolled * 0.4) + 'px)';
+            // Parallax on header blobs
+            var blobs = document.querySelectorAll('.header-blob');
+            blobs.forEach(function(b, i) {
+                b.style.transform = 'translate(' + (Math.sin(scrolled*0.01 + i) * 10) + 'px,' + (scrolled * (0.1 + i*0.05)) + 'px)';
+            });
+        });
+
+        // ===== COLLAPSIBLE MEMBERS =====
+        function toggleMemberList() {
+            const body = document.getElementById('memberBody');
+            const arrow = document.getElementById('memberArrow');
+            body.classList.toggle('open');
+            arrow.classList.toggle('open');
+        }
+
+        function updateMemberSummary() {
+            const rows = document.querySelectorAll('#participantTableBody tr');
+            let counts = {L4:0, L5:0, TL:0, L6:0};
+            rows.forEach(row => {
+                const name = row.querySelector('.participant-name');
+                if (name && name.value.trim()) {
+                    const role = row.querySelector('.participant-role').value;
+                    counts[role] = (counts[role] || 0) + 1;
+                }
+            });
+            document.getElementById('summaryL6').textContent = 'L6: ' + counts.L6;
+            document.getElementById('summaryTL').textContent = 'TL: ' + counts.TL;
+            document.getElementById('summaryL5').textContent = 'L5: ' + counts.L5;
+            document.getElementById('summaryL4').textContent = 'L4: ' + counts.L4;
+        }
+
+
+        // ===== AGENDA =====
+        function updateAgenda() {
+            var memberNames = document.querySelectorAll('.participant-name');
+            var memberCount = 0;
+            memberNames.forEach(function(n) { if (n.value.trim()) memberCount++; });
+            var s1 = memberCount > 0;
+            document.getElementById('statusMembers').textContent = s1 ? memberCount + '人' : '未入力';
+
+            var primary = parseFloat(document.getElementById('primaryTotal').value) || 0;
+            var secondary = parseFloat(document.getElementById('secondaryTotal').value) || 0;
+            var gift = getGiftTotal();
+            var s2 = (primary + secondary + gift) > 0;
+            document.getElementById('statusAmounts').textContent = s2 ? '¥' + (primary+secondary+gift).toLocaleString() : '未入力';
+
+            var allChecks = document.querySelectorAll('.check-primary:checked, .check-gift:checked, .check-secondary:checked');
+            var s3 = allChecks.length > 0;
+            document.getElementById('statusChecks').textContent = s3 ? allChecks.length + '個' : '未選択';
+
+            var amounts = document.querySelectorAll('.payment-amount');
+            var hasCalc = false;
+            amounts.forEach(function(a) { if (a.value && a.value !== '') hasCalc = true; });
+            document.getElementById('statusCalc').textContent = hasCalc ? '✅完了' : '待機中';
+
+            var slackOut = document.getElementById('slackOutput').textContent;
+            var s6 = slackOut !== 'ここに連絡文が生成されます...';
+            document.getElementById('statusShare').textContent = s6 ? '✅生成済' : '待機中';
+
+            var states = [s1, s2, s3, hasCalc, s6];
+            var steps = document.querySelectorAll('.agenda-step');
+            steps.forEach(function(step, i) {
+                step.classList.remove('active', 'done');
+                if (states[i]) {
+                    step.classList.add('done');
+                } else {
+                    var allPrevDone = true;
+                    for (var j = 0; j < i; j++) { if (!states[j]) allPrevDone = false; }
+                    if (allPrevDone) step.classList.add('active');
+                }
+            });
+        }
+
+
+        function calcFromPerPerson() {
+            var pp1 = parseFloat(document.getElementById('primaryPerPerson').value) || 0;
+            var pc1 = parseFloat(document.getElementById('primaryCount').value) || 0;
+            var pp2 = parseFloat(document.getElementById('secondaryPerPerson').value) || 0;
+            var pc2 = parseFloat(document.getElementById('secondaryCount').value) || 0;
+            if (pp1 && pc1) document.getElementById('primaryTotal').value = pp1 * pc1;
+            if (pp2 && pc2) document.getElementById('secondaryTotal').value = pp2 * pc2;
+            saveToStorage();
+        }
+    </script>
+
+</body></html>
